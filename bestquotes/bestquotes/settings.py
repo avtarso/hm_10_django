@@ -28,9 +28,8 @@ SECRET_KEY = 'django-insecure-^926tngu=y2%1+2@f+&uh@gv+-4gt!wr#*7uxkmpxp#*27=ui*
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://hm10django-production.up.railway.app/'
+    'hm10django-production.up.railway.app',
     'localhost'
-
 ]
 
 # Application definition
