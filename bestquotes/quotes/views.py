@@ -47,7 +47,7 @@ def add_quote(request):
             quote.added_by = request.user
             quote.save()
             form.save_m2m()  # Save many-to-many data
-            return redirect('quotes:index')
+            return redirect('quotes:quote_list')
     else:
         form = QuoteForm()
     return render(request, 'quotes/add_quote.html', {'form': form})
@@ -81,7 +81,7 @@ def tag_quotes(request, tag_id):
 
 
 def quote_list(request):
-    quotes = Quote.objects.all()
+    quotes = Quote.objects.all().order_by('-id')
     return render(request, 'quotes/quote_list.html', {'quotes': quotes})
 
 
