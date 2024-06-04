@@ -15,7 +15,7 @@
 <a href="{% url 'quotes:add_author' %}">Add a new Author</a><br />
 -->
 
-{% if author_quote_counts > 1 %}
+{% if author_quote_counts > 0 %}
     <a href="{% url 'quotes:author_quotes' author.id %}">You can read {{ author_quote_counts }} quotes from {{ author.fullname }} in this site</a>
 {% else %}
     You can read {{ author_quote_counts }} quotes from {{ author.fullname }} in this site

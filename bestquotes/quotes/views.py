@@ -88,7 +88,13 @@ def quote_list(request):
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     author_quote_counts = Quote.objects.filter(author_id=author_id).values('author').annotate(count=Count('id'))
-    return render(request, 'quotes/author_detail.html', {'author': author, 'author_quote_counts':author_quote_counts[0]['count']})
+    if author_quote_counts:
+        author_quots = author_quote_counts[0]['count']
+    else:
+        author_quots = 0
+    return render(request, 'quotes/author_detail.html', {'author': author, 'author_quote_counts':author_quots})
+
+
 
 def author_quotes(request, author_id):
     author = get_object_or_404(Author, id=author_id)
