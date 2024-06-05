@@ -11,36 +11,35 @@ from django.contrib.auth.models import User
 
 authors = [
     {
-        "fullname": "Albert Einstein",
-        "born_date": "March 14, 1879",
-        "born_location": "in Ulm, Germany",
-        "description": "description"
+        "fullname": "Rust Cohle",
+        "born_date": "July 31, 1965",
+        "born_location": "USA",
+        "description": "description 1"
     },
     {
-        "fullname": "J.K. Rowling",
+        "fullname": "Gregory House",
         "born_date": "July 31, 1965",
-        "born_location": "description"
+        "born_location": "London, England",
+        "description": "description 2"
     }
 ]
 
 quotes = [
     {
         "tags": [
-            "change",
-            "deep-thoughts",
-            "thinking",
-            "world"
+            "divine",
+            "person"
         ],
-        "author": "Albert Einstein",
-        "quote": "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”"
+        "author": "Rust Cohle",
+        "quote": "“If the only thing keeping a person decent is the expectation of divine reward then, brother, that person is a piece of s***. And I’d like to get as many of them out in the open as possible. You gotta get together and tell yourself stories that violate every law of the universe just to get through the goddamn day? What’s that say about your reality?”"
     },
     {
         "tags": [
-            "abilities",
-            "choices"
+            "deserve",
+            "People"
         ],
-        "author": "J.K. Rowling",
-        "quote": "“It is our choices, Harry, that show what we truly are, far more than our abilities.”"
+        "author": "Gregory House",
+        "quote": "“People don't get what they deserve. They just get what they get. There's nothing any of us can do about it.”"
     }
 ]
 
