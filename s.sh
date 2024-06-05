@@ -7,4 +7,6 @@ python manage.py migrate
 
 python fill.py
 
-gunicorn bestquotes.wsgi:application --bind 0.0.0.0:$PORT --log-level debug
+kill -9 $(lsof -t -i:8000)
+
+gunicorn bestquotes.wsgi --log-level debug
